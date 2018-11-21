@@ -23,7 +23,7 @@ resource "digitalocean_droplet" "server" {
       "apt install unzip openjdk-8-jre-headless -y",
       "unzip download",
       "rm download",
-      "git clone https://${var.gitlab_username}:${var.gitlab_password}@gitlab.com/jsnns/mc-world-${var.world_name}.git /root/world",
+      "git clone https://${var.gitlab_username}:${var.gitlab_password}@gitlab.com/${var.gitlab_username}/mc-world-${var.world_name}.git /root/world",
       "crontab -l | { cat; echo \"* * * * * bash /root/world/push.sh \"; } | crontab -",
       "echo eula=true > /root/eula.txt",
       "bash /root/FTBInstall.sh",
