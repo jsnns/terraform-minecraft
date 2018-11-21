@@ -1,0 +1,2 @@
+terraform apply --auto-approve
+ssh -i ~/.ssh/id_rsa root@rev.ftb.mc.sansburyhome.com bash ServerStart.sh

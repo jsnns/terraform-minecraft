@@ -1,0 +1,9 @@
+terraform init
+printf "Gitlab Username: "
+read gitlab_username
+printf "Gitlab Password: "
+read gitlab_password
+printf "MC World Name: "
+read world_name
+
+echo -e "gitlab_username=\"$gitlab_username\"\ngitlab_password=\"$gitlab_password\"\nworld_name=\"$world_name\"" >> terraform.tfvars
